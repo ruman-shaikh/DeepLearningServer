@@ -3,18 +3,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import os
+import os.path
 
 print("TensorFlow version: ", tf.__version__)
 
 def data():
-	train_path = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\train'
-	test_path = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\validation'
+	train_path = os.path.join(os.getcwd(), 'train')
+	test_path = os.path.join(os.getcwd(), 'validation')
 
-	train_cat_dir = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\train\\Cats'	
-	train_dog_dir = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\train\\dogs'
+	train_cat_dir = os.path.join(train_path, 'Cats')	
+	train_dog_dir = os.path.join(train_path, 'dogs')
 
-	validation_cat_dir = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\validation\\cats'
-	validation_dog_dir = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\validation\\dogs'
+	validation_cat_dir = os.path.join(test_path, 'cats')
+	validation_dog_dir = os.path.join(test_path, 'dogs')
 
 	print('total training cats images:', len(os.listdir(train_cat_dir)))
 	print('total training dogs images:', len(os.listdir(train_dog_dir)))
@@ -154,8 +155,9 @@ def train(model):
 def save_model(model):
 	import os.path
 
-	export_dir = 'D:\\Projects\\Ongoing_Projects\\CatsVDogs\\Models'
-	file_path = export_dir + '\\ImageNetCatsVDogs.h5'
+	export_dir = os.path.join(os.getcwd(), 'DLServer')
+	export_dir = os.path.join(export_dir, 'DLModels')
+	file_path = os.path.join(export_dir, 'ImageNetCatsVDogs.h5')
 	if os.path.isfile(export_dir) is False:
 		model.save(file_path)
 
