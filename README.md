@@ -16,4 +16,4 @@ The creation of the model and everthing related with it can be found in the mobn
 After training the model is saved as ImageNetCatsVDogs.h5 in the DLModels folder.
 
 The DLPred.py file contains all the function required to preprocess the image, load the model and make the prediction.
-The ModelList.py file contains the list of saved models and the function required to convert a tensorlfow model prediction output to a string of the prediction class.
+The ModelList.py file contains the list of saved models and the function required to convert a tensorlfow model prediction output to a string of the predicted class.
