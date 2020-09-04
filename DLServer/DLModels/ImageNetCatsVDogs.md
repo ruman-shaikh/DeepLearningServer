@@ -1,1 +1,3 @@
-Run the mobnet.py to generate the ImageNetCatsVDogs.h5 file.
+Find the file ImageNetCatsVDogs.h5 in the following link:
+https://drive.google.com/file/d/1iClVXOYCwBHbHV31g4-qYURHsyq6pDA7/view?usp=sharing
+If it's not in the link then run the mobnet.py to generate the ImageNetCatsVDogs.h5 file.
