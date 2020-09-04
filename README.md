@@ -13,6 +13,7 @@ The file client.py is the python client designed to interact with the above ment
 For demo a mobilenet pre-trained model is fine-tuned to classify images of cats and dogs.
 This model is used as an example but the server should be able to work with any tensorflow model.
 The creation of the model and everthing related with it can be found in the mobnet.py file.
+For training the model, get the CatsVsDogs dataset from kaggle.
 After training the model is saved as ImageNetCatsVDogs.h5 in the DLModels folder.
 
 The DLPred.py file contains all the function required to preprocess the image, load the model and make the prediction.
