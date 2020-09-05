@@ -157,7 +157,7 @@ def save_model(model):
 
 	export_dir = os.path.join(os.getcwd(), 'DLServer')
 	export_dir = os.path.join(export_dir, 'DLModels')
-	file_path = os.path.join(export_dir, 'ImageNetCatsVDogs.h5')
+	file_path = os.path.join(export_dir, 'NetCatsVDogsKeras.h5')
 	if os.path.isfile(export_dir) is False:
 		model.save(file_path)
 
